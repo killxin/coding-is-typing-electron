@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--
+    Use a content security policy to only allow loading images from https or from our extension directory,
+    and only allow scripts that have a specific nonce.
+    -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' 'unsafe-inline' data:">
+    <meta http-equiv="X-Content-Security-Policy" 
+        content="default-src 'self' 'unsafe-inline' data:">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding is typing</title>
+</head>
+<body>
+    <h1>Coding is typing</h1>
+    <div>
+        <span>Text Path:</span><input type="file" id="textPath" value="TextFile"/>
+        <span>Language:</span><input type="text" id="lang" />
+    </div>
+    <div>
+        <input type="checkbox" id="ifSound">sound</input>
+    </div>
+    <div>
+        <input type="checkbox" id="ifAudio">music</input>
+        <span>Audio Path:</span><input type="file" id="audioPath" />
+        <input type="number" id="duration" /><span>sec/key</span>
+    </div>
+    <div>
+        <input type="button" id="play" value="start" />
+        <input type="button" id="pause" value="stop" />
+        <input type="button" id="reset" value="reset" />
+        <span id="status"></span>
+    </div>
+    <br />
+    <div id="container" style="width:800px;height:500px;border:1px solid grey">
+    </div>
+</body>
+<link rel="stylesheet" type="text/css" href="./main.css">
+<script src="../node_modules/monaco-editor/min/vs/loader.js"></script>
+<script src="./editor.js"></script>
+</html>

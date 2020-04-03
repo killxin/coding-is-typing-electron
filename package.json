@@ -1,0 +1,20 @@
+{
+	"name": "coding-is-typing-electron",
+	"title": "Coding is typing",
+	"description": "learn something by typing it",
+	"version": "2.0.0",
+	"publisher": "rhjiang",
+	"repository": "https://github.com/killxin/coding-is-typing-electron",
+	"categories": [
+		"Other"
+	],
+	"icon": "media/icon.png",
+	"main": "./src/main.js",
+	"scripts": {
+		"start": "electron ."
+	},
+	"devDependencies": {
+		"electron": "^8.2.0",
+		"monaco-editor": "^0.19.0"
+	}
+}
